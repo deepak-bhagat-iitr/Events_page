@@ -2,14 +2,23 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ImArrowUpRight2 } from "react-icons/im";
-
+import { toast } from 'react-toastify';
 // Define HTMLComponent outside the Events component
 const HTMLComponent = ({ htmlContent }) => {
   return (
     <p dangerouslySetInnerHTML={{ __html: htmlContent }} />
   );
 };
-
+const notify = () => toast.success("All Events are live!", {
+  position: "top-right",
+  autoClose: 2000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light"
+});
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [liveActive, setLiveActive] = useState(false);
@@ -20,7 +29,7 @@ const Events = () => {
         let endpoint = 'https://api.esummit.in/events/all';
         const response = await axios.get(endpoint);
         // If liveActive is true, slice the response data to get only the first 5 events
-        const limitedEvents = liveActive ? response.data.slice(0, 5) : response.data;
+        const limitedEvents = response.data;
         setEvents(limitedEvents);
       } catch (error) {
         console.error('Error fetching events:', error);
@@ -46,8 +55,8 @@ const Events = () => {
         </div>
         <div className="button-container">
           <button onClick={handleAllClick} className={`${liveActive ? 'live' : 'all'}`}>All</button>
-          <button onClick={handleAllClick} className={`${liveActive ? 'all' : 'live'}`}>Live</button>
-          <button>Upcoming</button>
+          <button onClick={handleLiveClick} className={`${liveActive ? 'all' : 'live'}`}>Live</button>
+          <button onClick={notify}>Upcoming</button>
         </div>
       </div>
       <div className="container">
