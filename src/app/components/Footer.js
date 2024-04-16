@@ -30,6 +30,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+                <p className='para-follow'>Follow us at</p>
                 <div className="footer-bottom">
                     <p className="footer-copyright">E-Summit 2024 IIT Roorkee. All rights reserved.</p>
                     <div className="footer-social">
