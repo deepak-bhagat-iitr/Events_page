@@ -1,13 +1,9 @@
 // "use client"
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import dynamic from 'next/dynamic';
-// import Events from "./components/events";
-import Dropdown from "./components/Dropdown";
-// import "./globals.css"
+import Events from "./components/Events";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-const Events = dynamic(() => import("./components/events"));
 const App = () => {
   return (
     <>
