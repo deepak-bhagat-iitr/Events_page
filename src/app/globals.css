@@ -876,11 +876,15 @@ header {
   .card:hover {
     transform: scale(1.1);
   }
+
   .Toastify {
     font-size: 12px;
     letter-spacing: 1px;
   }
 
+  .navbar img {
+    height: 42%;
+  }
 
 }
 
@@ -959,7 +963,7 @@ header {
     width: 60%;
   }
 
-  .card-content p *{
+  .card-content p * {
     font-size: 12px;
   }
 
@@ -1166,6 +1170,7 @@ header {
   .card:hover {
     transform: scale(1.1);
   }
+
   .Toastify {
     font-size: 14px;
   }
@@ -1382,6 +1387,7 @@ header {
   .footer-contact-text {
     /* text-align: center; */
   }
+
   .Toastify {
     font-size: 14px;
   }
@@ -1809,6 +1815,7 @@ header {
   .footer {
     margin: 0;
   }
+
   .Toastify {
     font-size: 14px;
   }
