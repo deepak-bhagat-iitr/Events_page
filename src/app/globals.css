@@ -227,6 +227,7 @@ header {
 .content {
   /* overflow: hidden !important; */
   width: 100%;
+  overflow-x: hidden !important;
   /* height: 100vh; */
   /* overflow-y: hidden; */
 }
@@ -1764,23 +1765,30 @@ header {
   .card {
     width: 26.5rem;
     height: 23.875rem;
+    z-index: 100;
+  }
+
+  .content {
+    overflow-x: hidden;
   }
 
   .container {
     width: 90%;
+    /* margin-left: 11.2%; */
     /* margin: 0; */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
 
   .lower-div {
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 
   }
 
   .card-container {
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
+    /* padding: 12px 0 0 13px; */
 
   }
 
@@ -1800,6 +1808,8 @@ header {
     margin: 0;
     margin-bottom: 65px;
   }
+
+
 
   .card-content h1 {
     margin: 0 0 12px 0;
